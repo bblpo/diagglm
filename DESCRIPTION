@@ -1,0 +1,13 @@
+Package: diagglm
+Type: Package
+Title: Do multiple diagnoses for generalized linear model output; also plot and save the diagnoses 
+Version: 0.1.0
+Author: Baodong Liu
+Maintainer: Baodong Liu <bblpo@yahoo.com>
+Description: This package tests a particular generalized linear model in terms of whether the model assumpitions have been violated.
+    Both statistical tests (e.g., durbinWatsonTest) and visualizations (e.g., influence plot) are presented.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Depends: car,gvlma,MASS
+RoxygenNote: 6.0.1
