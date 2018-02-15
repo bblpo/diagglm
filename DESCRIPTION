@@ -1,7 +1,7 @@
 Package: diagglm
 Type: Package
 Title: Do multiple diagnoses for generalized linear model output; also plot and save the diagnoses 
-Version: 0.1.0
+Version: 0.1.1
 Author: Baodong Liu
 Maintainer: Baodong Liu <bblpo@yahoo.com>
 Description: This package tests a particular generalized linear model in terms of whether the model assumpitions have been violated.

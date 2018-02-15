@@ -23,9 +23,7 @@ diagglm<-function(x,file='result.txt'){
   dev.off()
 
 ### check nonlinerity #########
-  crPlots(x,main="crPlots for nonlinearity and need for transformation: see if two lines are straight and merge")
-  dev.copy(png,'crPlot.png')
-  dev.off()
+
   #ceresPlots(x,main="ceresPlots for nonlinerity")
   residualPlots(x,main="residualPlot for nonlinearity (no curve, no systematic feature)")
   dev.copy(png,'residualPlot.png')
@@ -70,5 +68,9 @@ diagglm<-function(x,file='result.txt'){
   all<-list("outlierTest"=a,"Durbin Watson Test"=b,
             "collinearityTest-VIF"=c)
   return(all)
+
+  crPlots(x,main="crPlots for nonlinearity and need for transformation: see if two lines are straight and merge")
+  dev.copy(png,'crPlot.png')
+  dev.off()
 }
 
