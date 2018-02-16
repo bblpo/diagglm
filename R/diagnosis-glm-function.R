@@ -59,6 +59,11 @@ diagglm<-function(x,file='result.txt'){
   out<-capture.output(vif(x))
   cat(out,file=file,append=TRUE,sep = "\n")
 
+  ## Since CrPlot doesn't work for dichotomous response variable, and interactions, we move it to the end
+  crPlots(x,main="crPlots for nonlinearity and need for transformation: see if two lines are straight and merge")
+  dev.copy(png,'crPlot.png')
+  dev.off()
+
 # ### display the test results on the screen ########
 
   a<-outlierTest(x)
@@ -69,8 +74,6 @@ diagglm<-function(x,file='result.txt'){
             "collinearityTest-VIF"=c)
   return(all)
 
-  crPlots(x,main="crPlots for nonlinearity and need for transformation: see if two lines are straight and merge")
-  dev.copy(png,'crPlot.png')
-  dev.off()
+
 }
 
